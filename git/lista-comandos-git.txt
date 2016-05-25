@@ -1,0 +1,69 @@
+========
+[Configuração só para unico repositorio]
+git config user.name  = configura o nome de usuario
+git config user.email configura o email de usuario
+========
+
+========
+[Configuração repositorio global]
+git config --global user.name "João Carlos Fonseca"
+git config --global user.email "jcfonsecagit@gmail.com"
+========
+
+mkidr = cria pasta
+
+git tag = cria tags(marcaoes para versoes) v0.1 , v0.2 e etc..
+---
+git diff v0.1 v0.2 = vê as diferenças entre as versões
+---
+git blame [nome do arquivo ] = mostra os autores e onde alteraram
+---
+git add = adiciona os arquivos para serem comitados
+---
+git add . = adiciona todos os arquivos
+---
+git add = *.txt (adiciona só arquivos .txt)
+---
+git add nome_da_pasta /  adiciona subpata do repositorio
+---
+git ls-files = verefica os arquivos que estão rastreados pelo git
+---
+git log = mostra os logs de commit
+---
+git whatchanged = mostra o que foi alterado em cada commit
+---
+git whatchanged -p = mostra o que foi alterado em cada commit detalhadamente
+---
+git remote = mostra repositorios remotos que estao na pasta
+---
+git remote add (origin <nome do repositorio de origem>) <url github>
+---
+git push oring master = envia os arquivos de <repositorio origem> criando a <branch>
+---
+git clone = Copia o repositorio para sua máquina já com todas as configurações e branchs definidas
+---
+git pull origin [nome branch] = baixa o conteúdo remoto e atualiza o seu conteudo local
+---
+git branch = Checa as branchs que exitem no repositorio local
+---
+git branch [nome] = Cria a branch com o nome escolido
+---
+git branch -r = Checa as branchs remotas
+---
+git push -u origin [nome branch] = Deixa a branch "ligada" traqueada ao repositorio, pois dessa forma ao dar pull (trazer) ou push(enviar) o git reconhece ela para ser atualizada e ficar de acordo com a remota
+---
+git branch -t origin/[nome da branch] = Cria uma branch com o mesmo nome da remota. Essa flag -t já traqueia o caminho para ficar igual a da remota com
+---
+git branch -a = lista as branchs remotas e locais
+---
+git branch -d [nome da branch] = Ao utilizar esse comando com essa flag nós deletamos uma branch local
+---
+git push origin [nome da branch] = Deletamos as branchs remotas
+---
+git checkout [nome da branch] = Nós trocamos entre branchs
+---
+git checkout -b [nome da branch] = Ao utilizar esse comando com essa flag nós criamos uma branch e já entramos nela para criar as alterações necessárias
+---
+git fetch origin = Verifica todas as alterações que foram feitas no repositório referente ao origin
+---
+
