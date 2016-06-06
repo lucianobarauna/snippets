@@ -1,0 +1,45 @@
+
+1º Vc precisa instalar o node.js na sua máquina https://nodejs.org/en/
+
+2º Abra o terminal na pasta raiz do projeto ex: [windows: c:\projeto, linux/mac: /home/user/projeto].
+
+Dentro dessa pasta você vai notar algumas coisas:
+
+Pasta src : É a pasta onde está nosso projeto não gerado que o gulp usa para pegar os arquivos e
+otimizar. O ideal é que permaneça com esse nome, se alterá-lo você precisará mudar o caminho dela no arquivo "gulpfile.js".
+
+browserslist : Esse arquivo é a configuração de um do módulo "autoprefixer" que faz com que não seja
+preciso colocar os prefixos "-moz", "-webkit" e etc... (obs.: não apagar o browserslist).
+
+gulpfile.js: Arquivo do gulp com as configurações e tasks (tarefas) para gerar a versão de dist. (obs.: não apagar o "gulpfile.js").
+
+package.json: Arquivo com lista de dependências que precisam ser baixadas quando vc utilizar o
+comando "npm install". (obs.: não apagar o package.json).
+
+3º Com o terminal aberto na pasta raiz digite "npm install", após isso, ele baixará todas as dependências
+de desenvolvimento que estão no arquivo "package.json" que são necessárias para gerar a build do seu projeto. 
+Isso pode demorar dependendo da conexão e quantidade de módulos.
+
+4º Depois que terminou de baixar e instalar tudo vc vai notar que a pasta "node_modules" foi instalada.
+Nessa pasta ficam todos os módulos que fazem a otimização do projeto.
+
+5º O "gulp" já está configurado e será necessário digitar 2 (dois) comandos para fazer rodar as task(tarefas), são eles:
+
+[npm run gulp otimizar] : Esse comando no terminal inicializa as tarefas padrões de otimização que estão descritas no arquivo "gulpfile.js".
+Isso pode demorar um pouco dependendo da quantidade de arquivos que têm no projeto, por este motivo o ideal é ser feito no final do
+dia ou quando finalizar todas as alterações que vc fez.
+Quando o terminal finalizar você vai perceber que foi gerada uma pasta [dist], é este conteúdo/pasta que deve ser encaminhada à equipe
+de desenvolvimento.
+
+obs.: caso o servidor esteja em execução, será necessário pará-lo para executar o comando "npm run gulp otimizar".
+
+[npm run gulp server] : Esse comando no terminal inicializa o módulo "browser-sync" que faz com que não seja mais preciso dar refresh no navegador,
+sendo assim, se tem um "autoreload" toda vez que fazemos qualquer alteração dentro da pasta [src] e subpastas.
+obs.: Você precisa deixar o terminal aberto enquanto executa essa task(tarefa).
+
+O browser-sync no terminal oferece algumas urls, uma local e outra para compartilhar com qualquer pessoa que esteja na mesma rede na qual
+o projeto esteja sendo executado, além disso, ele também nos fornece algumas ferramentas para debuggar a conexão e css, basta acessar o endereço
+da UI (descrição no terminal) que ele apresentará no terminal para que você possa debugar o que deseja.
+
+6º Quando terminar o projeto basta colocar no servidor de design as seguintes pastas e arquivos: [dist], [src], "browserslist", "gulpfile.js" e
+"package.json"
