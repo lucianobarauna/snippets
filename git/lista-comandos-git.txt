@@ -102,3 +102,5 @@ git checkout -b [NOME BRANCH] = Cria um novo branch com o nome passado
 
 ---
 git branch -D [NOME BRANCH] = deleta o branch especificado atravez do nome
+---
+git merge [NOME BRANCH] = junta o branch ao que está o ponteiro head
