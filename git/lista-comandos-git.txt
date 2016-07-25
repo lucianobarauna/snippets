@@ -1,3 +1,7 @@
+=================================================================
+Bizus alura
+=================================================================
+
 ========
 [Configuracao so para unico repositorio]
 git config user.name  = configura o nome de usuario
@@ -62,14 +66,14 @@ git push origin [nome da branch] = Deletamos as branchs remotas
 ---
 git checkout [nome da branch] = Nos trocamos entre branchs
 ---
-git checkout -b [nome da branch] = Ao utilizar esse comando com essa flag nos criamos uma branch e j� entramos nela para criar as alteracoes necessarias
+git checkout -b [nome da branch] = Ao utilizar esse comando com essa flag nos criamos uma branch e ja entramos nela para criar as alteracoes necessarias
 ---
 git fetch origin = Verifica todas as alteracoes que foram feitas no repositorio referente ao origin
 ---
 
-=====
+=================================================================
 Bizus do Curso Justen
-=====
+=================================================================
 
 $ git log decorate = mostra algumas informações.
 ---
@@ -77,10 +81,53 @@ $ git log --author = "Teste" mostra todos os commits que tenhão teste como auto
 ---
 $ git log shortlog = mostra os autores, commits que fizeram e quantidade
 ---
-$ git log shortlog -sn = mostra os autores,  e quantidade de commits que fizeram
+$ git shortlog -sn = mostra os autores,  e quantidade de commits que fizeram
 ---
 $ git log --graph = mostra em forma gráfica o que está acontecendo.
 ---
 $ git show [HASH] = mostra o que foi feito no commit
 ---
 $ git diff --name-only = mostra só o nome dos arquivos que foram modificados
+---
+git reset HEAD = desfaz a alteração depois de comitado
+---
+git commit -am "[mensagem aqui]" = Já comita todos os arquivos modificados e manda com a mensagem
+---
+git reset --soft [HASH DO COMIT ANTERIOR AO QUE VC QUER VOLTAR] = desfaz o comit e volta para estado de modificado no stage permanecendo ainda com as modificações que foram feitas
+---
+git reset --mixed [HASH DO COMIT ANTERIOR AO QUE VC QUER VOLTAR] = desfaz o comit e volta para estado de modificado no stage preparada para ser dado o commit
+---
+git reset --hard [HASH DO COMIT ANTERIOR AO QUE VC QUER VOLTAR] = desfaz tudo inclusive as alterações
+---
+git push -u origin master = Envia os arquivos para o repositório remoto já trakeando ele (-u), sendo assim na próxima vez só é preciso digitar
+
+---
+git checkout -b [NOME BRANCH] = Cria um novo branch com o nome passado
+---
+git branch -D [NOME BRANCH] = deleta o branch local especificado atravez do nome
+---
+git push origin [NOME BRANCH] = Cria o branch remoto
+---
+git merge [NOME BRANCH] = junta o branch ao que está o ponteiro head e cria um commit dizendo o que foi feito
+---
+git rebase [NOME BRANCH] = junta o branch ao que está o ponteiro head e não cria um commit
+---
+git stash = Guarda as modificações que você fez no momento em algum arquivo tirando ele do estado de moficado dessa forma você pode fazer outras coisas como criar branch sem ter a necessidade de levar esse arquivo ainda não terminado com vc.
+---
+git stash apply = Aplica as alteracoes que foram salvas no git stash
+---
+git stash list = lista todos os stash que está fazendo
+---
+git stash clear = limpa todo o stash
+---
+git tag -a [versao da tag.ex: 1.0.0] -m "[texto aqui]" = Cria uma tag com uma anotacao (-a)
+---
+git push origin master --tags = sobe as tags para o repositorio online
+---
+git tag = lista todas as tags cadastradas
+---
+git revert [HASH] = desfaz seu commit e commita um novo com essa reversao para caso vc queira trabalhar no futuro
+
+git tag -D [nome da tag] = Apaga o branch local
+
+git push origin :[tag/branch] = Apaga os remotos.
