@@ -1,3 +1,7 @@
+=================================================================
+Bizus alura
+=================================================================
+
 ========
 [Configuracao so para unico repositorio]
 git config user.name  = configura o nome de usuario
@@ -67,9 +71,9 @@ git checkout -b [nome da branch] = Ao utilizar esse comando com essa flag nos cr
 git fetch origin = Verifica todas as alteracoes que foram feitas no repositorio referente ao origin
 ---
 
-=====
+=================================================================
 Bizus do Curso Justen
-=====
+=================================================================
 
 $ git log decorate = mostra algumas informações.
 ---
@@ -99,8 +103,31 @@ git push -u origin master = Envia os arquivos para o repositório remoto já tra
 
 ---
 git checkout -b [NOME BRANCH] = Cria um novo branch com o nome passado
+---
+git branch -D [NOME BRANCH] = deleta o branch local especificado atravez do nome
+---
+git push origin [NOME BRANCH] = Cria o branch remoto
+---
+git merge [NOME BRANCH] = junta o branch ao que está o ponteiro head e cria um commit dizendo o que foi feito
+---
+git rebase [NOME BRANCH] = junta o branch ao que está o ponteiro head e não cria um commit
+---
+git stash = Guarda as modificações que você fez no momento em algum arquivo tirando ele do estado de moficado dessa forma você pode fazer outras coisas como criar branch sem ter a necessidade de levar esse arquivo ainda não terminado com vc.
+---
+git stash apply = Aplica as alteracoes que foram salvas no git stash
+---
+git stash list = lista todos os stash que está fazendo
+---
+git stash clear = limpa todo o stash
+---
+git tag -a [versao da tag.ex: 1.0.0] -m "[texto aqui]" = Cria uma tag com uma anotacao (-a)
+---
+git push origin master --tags = sobe as tags para o repositorio online
+---
+git tag = lista todas as tags cadastradas
+---
+git revert [HASH] = desfaz seu commit e commita um novo com essa reversao para caso vc queira trabalhar no futuro
 
----
-git branch -D [NOME BRANCH] = deleta o branch especificado atravez do nome
----
-git merge [NOME BRANCH] = junta o branch ao que está o ponteiro head
+git tag -D [nome da tag] = Apaga o branch local
+
+git push origin :[tag/branch] = Apaga os remotos.
