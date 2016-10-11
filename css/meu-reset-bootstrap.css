@@ -1,0 +1,41 @@
+/*
+CSS RESET V1.8
+Criado em: 20/03/2012
+Desenvolvido por: Luciano Barauna
+*/
+
+html,
+body { height:100%; }
+
+textarea {
+	max-width:100%;
+	width:100%;
+	-webkit-box-sizing:border-box;
+		 -moz-box-sizing:border-box;
+			-ms-box-sizing:border-box;
+					box-sizing:border-box;
+}
+
+img,
+iframe,
+object,
+video {
+	max-width:100%;
+	width:auto;
+	height:auto;
+}
+
+form:before,
+form:after {
+	display: table;
+	content:" ";
+}
+form:after { clear: both; }
+
+a { 		
+	-webkit-transition: all 0.1s ease-out 0.1s;
+	     -o-transition: all 0.1s ease-out 0.1s;
+	        transition: all 0.1s ease-out 0.1s;
+}
+
+h1, h2, h3, h4, h5 {}

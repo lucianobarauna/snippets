@@ -1,0 +1,98 @@
+/* 
+CSS RESET V1.8
+Criado em: 22/10/2012
+Ultima atualizacao em: 10/09/2014
+Atualizado em: 14/05/2015
+Desenvolvido por: Luciano Barauna - Fattoriaweb
+*/
+
+* { 
+	margin:0; 
+	padding:0; 
+	border:none;
+	outline:none;
+}
+
+html { height:100%; }
+
+body { 
+	font-size:62.5%; /* equivale 10px */
+	-webkit-font-smoothing: antialiased;
+} 
+
+::selection{}
+
+div:before, 
+div:after, 
+ol:before, 
+ol:after, 
+dl:before, 
+dl:after, 
+ul:before, 
+ul:after, 
+form:before,
+form:after {
+	display: table;
+	content:" "; 
+}
+
+div:after, 
+ol:after, 
+dl:after, 
+ul:after, 
+form:after { 
+	clear: both;
+}
+
+
+input, 
+select, 
+textarea {
+	padding:2px 5px;
+	font-size:12px; 
+	font-family:Tahoma, Geneva, sans-serif; 
+	color:#1c1c1c; 
+}
+
+textarea { 
+	max-width:100%; 
+	width:100%; 
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	-ms-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.input-none { 
+	border:0; 
+	background-color:transparent;
+}
+
+a { 		
+	-webkit-transition: all 0.1s ease-out 0.1s;
+	     -o-transition: all 0.1s ease-out 0.1s;
+	        transition: all 0.1s ease-out 0.1s;
+}
+
+a:hover { text-decoration:none; }
+
+.wrap {
+	margin:0 auto; 
+	min-height:600px; 
+	height:auto !important;
+	width:980px; 
+}
+
+p { margin-bottom:15px; }
+
+h1, h2, h3, h4, h5 {}
+
+img, 
+iframe, 
+object, 
+embed, 
+video { 
+	max-width:100%; 
+	width:auto; 
+	height:auto;
+}
