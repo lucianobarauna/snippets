@@ -131,3 +131,5 @@ git revert [HASH] = desfaz seu commit e commita um novo com essa reversao para c
 git tag -D [nome da tag] = Apaga o branch local
 
 git push origin :[tag/branch] = Apaga os remotos.
+
+git add -A * = Faz com que o git indentifique quais os arquivos foram renomeados ou apagados. Facilitando o commit com isso não é preciso ter que fazer um a um e exclui quem precisa sem prejudicar.
